@@ -14,6 +14,9 @@ import org.springframework.context.annotation.Bean;
 /**
  * springBoot bean lifecycle
  * <p>
+ * ApplicationContextInitializer
+ * </p>
+ * <p>
  * BeanNameAware
  * ApplicationContextAware
  * </p>
@@ -39,6 +42,9 @@ import org.springframework.context.annotation.Bean;
 public class Application implements ApplicationRunner, CommandLineRunner, BeanNameAware, ApplicationContextAware {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+//        SpringApplication application = new SpringApplication(Application.class);
+//        application.addInitializers(new CustomApplicationContextInitializer());
+//        application.run(args);
     }
 
 
